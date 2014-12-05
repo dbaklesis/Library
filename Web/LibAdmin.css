@@ -1,0 +1,97 @@
+/* 
+    Document   : LibAdmin.css
+    Created on : 13 Ιουν 2011, 5:28:45 μμ
+    Author     : Dimitris
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+  display: block;
+}
+
+
+h1 {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 25px;
+   font-weight: bold;
+      color: #CC0099;
+   
+}
+
+
+h2 {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 15px;
+   font-weight: bold;
+   color: #FFFFFF;
+}
+
+input {
+    border: 1px solid #006;
+    background: #ffc;
+}
+
+input {
+    border: 1px solid #006;
+    /*background: #9cf;*/
+    background: #444;
+}
+label {
+    display: block;
+    width: 150px;
+    float: left;
+    margin: 2px 4px 6px 4px;
+    text-align: right;
+}
+
+body {
+   /*margin-left: 15%; margin-right: 15%;*/
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 14px;
+   color: #333333;
+   /*background-color: #6666CC;*/
+   background-color: #FFFFFF;
+}
+br { clear: left; }
+
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+a.button {
+    background: transparent url('bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 14px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+a.button span {
+    background: transparent url('bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+}

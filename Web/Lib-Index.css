@@ -1,0 +1,35 @@
+/* 
+    Document   : Lib-Tables
+    Created on : 11 Ιουν 2011, 4:08:22 μμ
+    Author     : Dimitris
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+h1 {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 24px;
+   font-weight: bold;
+   color: #000000;
+}
+
+td {
+	border-bottom: navy solid thin;
+	border-top: navy solid thin;
+	border-left: none;
+	border-right: none;
+	font-size: small;
+}
+
+body {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 14px;
+   color: #333333;
+   background-color: #F9F9F9;
+}
+ 
