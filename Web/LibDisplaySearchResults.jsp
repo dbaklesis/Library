@@ -15,9 +15,9 @@
 
 <html>
 	<meta http-equiv="Content-Type" content="text/html">
-	<link rel="stylesheet" type="text/css" href="LibDisplaySearchResults.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/LibDisplaySearchResults.css">
 
-<script src="libScripts.js"></script>
+<script src="${pageContext.request.contextPath}/scripts/libScripts.js"></script>
   <head>
     <title>Library - Αποτελέσματα Αναζήτησης</title>  
   </head>
@@ -90,27 +90,27 @@
 	<%
 			if (pg > 1) {
 	%>
-	  			<input type="button" name=firstbtn onclick="dispResultsButtonPressed('first', 1)" value="<<">
-	  			<input type="button" name="previousbtn" onclick="dispResultsButtonPressed('previous', <%=pg-1%>)" value="<">
+	  			<input class="steer" type="button" name=firstbtn onclick="dispResultsButtonPressed('first', 1)" value="<<">
+	  			<input class="steer" type="button" name="previousbtn" onclick="dispResultsButtonPressed('previous', <%=pg-1%>)" value="<">
 	  	<%	} 
 			else {
 		%>
-				<input type="button" name="firstbtn" disabled="disabled" value="<<">
-				<input type="button" name="previousbtn" disabled="disabled" value="<">
+				<input class="steer" type="button" name="firstbtn" disabled="disabled" value="<<">
+				<input class="steer" type="button" name="previousbtn" disabled="disabled" value="<">
 		<%
 			}
 		%>
 		<%
 			if (pg < numpages) {
   		%>
-				<input type="button" name="nextbtn" onclick="dispResultsButtonPressed('next', <%=pg+1%>)" value=">">
-				<input type="button" name="lastbtn" onclick="dispResultsButtonPressed('last', <%=numpages%>)" value=">>">
+				<input class="steer" type="button" name="nextbtn" onclick="dispResultsButtonPressed('next', <%=pg+1%>)" value=">">
+				<input class="steer" type="button" name="lastbtn" onclick="dispResultsButtonPressed('last', <%=numpages%>)" value=">>">
 		<%
 			} 
 			else {
 		%>
-			<input type="button" name="nextbtn" disabled="disabled" value=">">
-			<input type="button" name="lastbtn" disabled="disabled" value=">>">
+			<input class="steer" type="button" name="nextbtn" disabled="disabled" value=">">
+			<input class="steer" type="button" name="lastbtn" disabled="disabled" value=">>">
 		<%
 			}
 		%>	
@@ -209,27 +209,27 @@
 		<%
 			if (pg > 1) {
 		%>
-	  			<input type="button" name=firstbtn onclick="dispResultsButtonPressed('first', 1)" value="<<">
-	  			<input type="button" name="previousbtn" onclick="dispResultsButtonPressed('previous', <%=pg-1%>)" value="<">
+	  			<input class="steer" type="button" name=firstbtn onclick="dispResultsButtonPressed('first', 1)" value="<<">
+	  			<input class="steer" type="button" name="previousbtn" onclick="dispResultsButtonPressed('previous', <%=pg-1%>)" value="<">
 	  	<%	} 
 			else {
 		%>
-				<input type="button" name="firstbtn" disabled="disabled" value="<<">
-				<input type="button" name="previousbtn" disabled="disabled" value="<">
+				<input class="steer" type="button" name="firstbtn" disabled="disabled" value="<<">
+				<input class="steer" type="button" name="previousbtn" disabled="disabled" value="<">
 		<%
 			}
 		%>
 		<%
 			if (pg < numpages) {
   		%>
-				<input type="button" name="nextbtn" onclick="dispResultsButtonPressed('next', <%=pg+1%>)" value=">">
-				<input type="button" name="lastbtn" onclick="dispResultsButtonPressed('last', <%=numpages%>)" value=">>">
+				<input class="steer" type="button" name="nextbtn" onclick="dispResultsButtonPressed('next', <%=pg+1%>)" value=">">
+				<input class="steer" type="button" name="lastbtn" onclick="dispResultsButtonPressed('last', <%=numpages%>)" value=">>">
 		<%
 			} 
 			else {
 		%>
-			<input type="button" name="nextbtn" disabled="disabled" value=">">
-			<input type="button" name="lastbtn" disabled="disabled" value=">>">
+			<input class="steer" type="button" name="nextbtn" disabled="disabled" value=">">
+			<input class="steer" type="button" name="lastbtn" disabled="disabled" value=">>">
 		<%
 			}
 		%>	

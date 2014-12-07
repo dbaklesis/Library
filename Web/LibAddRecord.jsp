@@ -12,9 +12,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="LibAddRecord.css">
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="libScripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Lib-Add-Record.css">
+	<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/libScripts.js"></script>
 </head>
 
 <%
@@ -92,7 +92,6 @@
     }
   
 %>
-
 <br>
 <% if (lib.isAdmin()) { %>
 <title>Library - Προσθήκη/Επεξεργασία</title>
@@ -118,14 +117,14 @@
 	<div style="text-align: center">
 	<input type="hidden" name="buttonpressed">
 	<%if (cursor == 1) {%>
-	<input type="button" disabled="disabled" value="<--" name="beforeButton">
+	<input class="steer" type="button" disabled="disabled" value="<--" name="beforeButton">
 	<%} else { %>
-	<input type="button" value="<--" onclick="return validateAddRecordInput('Προηγούμενο', '<%=mode%>', '<%=cursor%>')" name="beforeButton">
+	<input class="steer" type="button" value="<--" onclick="return validateAddRecordInput('Προηγούμενο', '<%=mode%>', '<%=cursor%>')" name="beforeButton">
 	<%} %>
 	<%if (cursor == rsSize) { %>
-	<input type="button" disabled="disabled" value="-->" name="nextButton">
+	<input class="steer" type="button" disabled="disabled" value="-->" name="nextButton">
 	<% } else {%>
-	<input type="button" value="-->" onclick="validateAddRecordInput('Επόμενο', '<%=mode%>', <%=cursor%>)" name="nextButton">
+	<input class="steer" type="button" value="-->" onclick="validateAddRecordInput('Επόμενο', '<%=mode%>', <%=cursor%>)" name="nextButton">
 	<%} %>
 	</div>
 		<%--<table cellpadding=4 cellspacing=2 border=4>--%>
@@ -314,16 +313,16 @@
 		<% //if (cursor == rsb.getRsSize()) {
 		//if (util.libIsCommited(mt.getCounter(), statement) == true) {
 		if (lib.isAdmin() == true) {%>
-			<%--<input type="button" value="Προσθήκη" onclick="return validateAddRecordInput('Προσθήκη', '<%=mode%>', '<%=cursor%>')" name="aButton">--%>
-			<input type="button" value="Προσθήκη" onclick="return validateAddRecordInput('Προσθήκη/Επεξεργασία', '<%=mode%>', '<%=cursor%>')" name="aButton">
+			<%--<input class="" type="button" value="Προσθήκη" onclick="return validateAddRecordInput('Προσθήκη', '<%=mode%>', '<%=cursor%>')" name="aButton">--%>
+			<input class="steer" type="button" value="Προσθήκη" onclick="return validateAddRecordInput('Προσθήκη/Επεξεργασία', '<%=mode%>', '<%=cursor%>')" name="aButton">
 	 		<%if (cursor == rsb.getRsSize()) {
 				if (util.libIsCommited(mt.getCounter(), statement) == true) {%>
-					<input type="button" value="Διαγραφή" onclick="return validateAddRecordInput('Διαγραφή', '<%=mode%>', '<%=cursor%>')" name="dButton">
+					<input class="steer" type="button" value="Διαγραφή" onclick="return validateAddRecordInput('Διαγραφή', '<%=mode%>', '<%=cursor%>')" name="dButton">
 			<% } else {%>
-					<input type="button" value="Διαγραφή" disabled="disabled"  name="dButton">
+					<input class="steer" type="button" value="Διαγραφή" disabled="disabled"  name="dButton">
 			<% }%>
 			<%} else { %>
-				<input type="button" value="Διαγραφή" onclick="return validateAddRecordInput('Διαγραφή', '<%=mode%>', '<%=cursor%>')" name="dButton">
+				<input class="steer" type="button" value="Διαγραφή" onclick="return validateAddRecordInput('Διαγραφή', '<%=mode%>', '<%=cursor%>')" name="dButton">
 			<%}%>
 			<div class="suggestionsBox" id="suggestions" style="display: none;">
 			<div class="suggestionList" id="autoSuggestionsList">

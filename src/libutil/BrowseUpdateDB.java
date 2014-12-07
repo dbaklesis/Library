@@ -85,7 +85,8 @@ public class BrowseUpdateDB extends HttpServlet {
     if (mt.isEmpty() == false) {
     	
     	 boolean result=false;
-	    if ((mode.equals("add") || (mode.equals("add_while_editing"))) && (cursor == rsb.getRsSize())) {
+	    if ((mode.equals("add") || (mode.equals("add_while_editing"))) && (cursor == rsb.getRsSize() && 
+	    		(rsb.getRsBean(cursor).matches(mt) == true))) {
 	    	
 	    	if (util.libIsCommited(mt.getCounter(), lib.getConnection().createStatement()) == false) {
 	    		result = mtBuildSQLInsert(rsb.getRsBean(cursor), mt, lib);
@@ -116,13 +117,16 @@ public class BrowseUpdateDB extends HttpServlet {
 			   	session.setAttribute("rsb", rsb);
 		    	//else
 		    		//result = mtBuildSQLUpdate(rsb.getRsBean(cursor), mt, lib);
-		    } else if (mode.equals("add_while_editing")) {
+		    } 
+		    
+		    if (mode.equals("add_while_editing")) {
 		    	
 		    	dispatcher = request.getRequestDispatcher("/LibAddRecord.jsp?mode=add_while_editing");
 		    	dispatcher.forward(request, response);
 		    	return;
-		   
-		    } else {
+		    }
+		    
+	    } else {
 	 
 		    	if (direction.equals("previous")) {
 			    	if (cursor > 1) {
@@ -152,7 +156,7 @@ public class BrowseUpdateDB extends HttpServlet {
 	    	return;
 	    }
 	  }
-    }
+    
 		    
     	if (direction.equals("previous")) {
 	    	if (cursor > 1)

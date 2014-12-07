@@ -25,10 +25,10 @@
 %>
 
 <html>
-<script src="libScripts.js"></script>
+<script src="${pageContext.request.contextPath}/scripts/libScripts.js"></script>
   <head>
   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="LibTables.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/LibTables.css">
     <title>Library - Πίνακες - Διαγραφή</title>
   </head>
   <body>

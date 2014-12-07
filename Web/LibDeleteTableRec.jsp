@@ -9,11 +9,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <html>
-<script type="text/javascript" src="libScripts.js"></script>
-<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/libScripts.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery.js"></script>
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="LibTables.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/LibTables.css">
     <title>Library - Πίνακες - Διαγραφή</title>
   </head>
   
